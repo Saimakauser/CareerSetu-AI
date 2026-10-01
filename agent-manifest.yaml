@@ -1,0 +1,53 @@
+apiVersion: aikart.dev/v1
+kind: AgentManifest
+
+metadata:
+  name: careersetu-ai
+  displayName: "CareerSetu AI"
+  description: "An agentic career readiness agent that analyzes skill gaps and creates adaptive learning roadmaps."
+
+runtime:
+  type: docker
+  image: "docker.io/saimakauser/careersetu-ai:1.0.0"
+
+resources:
+  cpu: 1
+  memoryMb: 1024
+  timeoutSeconds: 120
+
+inputs:
+  - name: target_role
+    label: "Target Career Role"
+    type: select
+    required: true
+    options:
+      - "Software Engineer"
+      - "Full Stack Developer"
+      - "Data Analyst"
+      - "Data Scientist"
+      - "AI / ML Engineer"
+      - "Cybersecurity Analyst"
+      - "Cloud Engineer"
+      - "DevOps Engineer"
+      - "UI/UX Designer"
+      - "Product Manager"
+      - "Business Analyst"
+      - "Financial Analyst"
+      - "Digital Marketing Specialist"
+
+  - name: current_skills
+    label: "Current Skills"
+    type: textarea
+    required: true
+
+  - name: daily_hours
+    label: "Daily Learning Hours"
+    type: number
+    required: true
+    default: 2
+
+output:
+  format: markdown
+
+security:
+  networkEgress: none
