@@ -107,41 +107,40 @@ Product Manager
 Business Analyst
 Financial Analyst
 Digital Marketing Specialist
+
 🏗️ System Architecture
 
-Student Profile
+                    ┌─────────────────────┐
+                    │     Student Input   │
+                    │ Career + Skills +   │
+                    │ Learning Time       │
+                    └──────────┬──────────┘
+                               │
+                               ↓
+                    ┌─────────────────────┐
+                    │    CareerSetu Agent │
+                    └──────────┬──────────┘
+                               │
+                ┌──────────────┼──────────────┐
+                ↓              ↓              ↓
+          Skill Analysis   Prioritization   Readiness
+                │              │              │
+                └──────────────┼──────────────┘
+                               ↓
+                    ┌─────────────────────┐
+                    │ Learning Roadmap    │
+                    │ + Assessments       │
+                    └──────────┬──────────┘
+                               ↓
+                    ┌─────────────────────┐
+                    │ Adaptive Feedback    │
+                    └──────────┬──────────┘
+                               ↓
+                    ┌─────────────────────┐
+                    │ Next Action +        │
+                    │ Portfolio Project    │
+                    └─────────────────────┘
 
-↓
-
-CareerSetu AI Agent
-
-↓
-
-Skill Gap Analysis
-
-↓
-
-Skill Prioritization
-
-↓
-
-Career Readiness Calculation
-
-↓
-
-Personalized Learning Roadmap
-
-↓
-
-Assessment
-
-↓
-
-Adaptive Recommendation
-
-↓
-
-Next Action + Portfolio Project
 
 🛠️ Technology Stack
 
